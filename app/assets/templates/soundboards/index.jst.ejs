@@ -1,0 +1,11 @@
+<h3>Index</h3>
+
+<ul>
+  <% soundboards.each(function (soundboard){ %>
+    <li>
+      <a href="#/soundboards/<%= soundboard.id %>">
+        <%= soundboard.escape('name') %>
+      </a>
+    </li>
+  <% }); %>
+</ul>

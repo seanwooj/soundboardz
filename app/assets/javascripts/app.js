@@ -5,7 +5,8 @@ window.App = {
   Routers: {},
 
   initialize: function () {
-    alert('soudboards!');
+    new App.Routers.AppRouter();
+    Backbone.history.start();
   }
 };
 

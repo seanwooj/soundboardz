@@ -1,9 +1,9 @@
-window.App.Views.SoundboardsShow = Backbone.View.extend({
-  template: JST['soundboards/show'],
+window.App.Views.SoundboardsIndex = Backbone.View.extend({
+  template: JST['soundboards'],
 
   initialize: function (options) {
     this.listenTo(
-      this.model,
+      this.collection,
       'sync add',
       this.render.bind(this)
     );
@@ -11,7 +11,7 @@ window.App.Views.SoundboardsShow = Backbone.View.extend({
 
   render: function () {
     var renderedContent = this.template({
-      soundboard: this.model
+      soundboards: this.collection
     });
 
     this.$el.html(renderedContent);
