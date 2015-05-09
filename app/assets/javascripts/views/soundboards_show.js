@@ -1,4 +1,4 @@
-window.App.Views.SoundboardsShow = Backbone.View.extend({
+window.App.Views.SoundboardsShow = Backbone.CompositeView.extend({
   template: JST['soundboards/show'],
 
   initialize: function (options) {
